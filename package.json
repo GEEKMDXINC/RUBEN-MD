@@ -1,0 +1,21 @@
+{
+  "name": "ruben-md-bot-whatsapp",
+  "version": "1.0.0",
+  "description": "Bot WhatsApp Ruben-MD",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GEEKMDXINC/RUBEN-MD.git"
+  },
+  "keywords": [
+    "whatsapp",
+    "bot",
+    "ruben-md"
+  ],
+  "author": "GEEKMDXINC",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "whatsapp-web.js": "^1.13.0",
+    "qrcode-terminal": "^0.12.0"
+  }
+}
