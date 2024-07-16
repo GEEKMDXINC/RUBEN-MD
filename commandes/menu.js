@@ -2,6 +2,7 @@
 
 ```javascript
 /** Copyright (C) 2022. Licensed under the  GPL-3.0 License; You may not use this file except in compliance with the License. It is supplied in the hope that it may be useful. * @project_name : Ruben-MD * @author : Votre nom <votre_lien_github> * @description : Ruben, Un bot WhatsApp multifonctionnel. * @version 0.0.1 **/
+
 const os = require('os');
 const moment = require("moment-timezone");
 const fs = require("fs");
@@ -64,8 +65,9 @@ Ruben.cmd({
         }
         str += `*⭐️Tapez :* _${prefix}help nom_de_la_commande_ pour en savoir plus sur une commande spécifique.\n*Exemple :* _${prefixVoici le fichier de menu personnalisé pour Ruben-MD :
 
-```javascript
+
 /** Copyright (C) 2022. Licensed under the  GPL-3.0 License; You may not use this file except in compliance with the License. It is supplied in the hope that it may be useful. * @project_name : Ruben-MD * @author : Your Name <your_github_link> * @description : Ruben, A Multi-functional whatsapp bot. * @version 0.0.1 **/
+
 const os = require('os');
 const moment = require("moment-timezone");
 const fs = require("fs");
