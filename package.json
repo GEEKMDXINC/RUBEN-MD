@@ -9,6 +9,7 @@
   "author": "Ruben",
   "license": "MIT",
   "dependencies": {
+    "@whiskeysockets/baileys": "6.6.0",
 
     
   }
