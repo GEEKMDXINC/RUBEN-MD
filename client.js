@@ -1,5 +1,5 @@
 const axios = require("axios");
-const config = require("./config");
+const fs = require("fs");
 const pino = require("pino");
 const path = require('path');
 const { default: makeWASocket, useMultiFileAuthState, logger, delay, makeCacheableSignalKeyStore } = require("ovl_wa_baileys");
@@ -41,4 +41,3 @@ async function main() {
     slg.ev.on('creds.update', saveCreds)
 
 main(),
-
