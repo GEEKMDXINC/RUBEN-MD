@@ -1,31 +1,24 @@
 {
-  "name": "OVL-Md",
+  "name": "SLG",
   "version": "1.0.0",
   "description": "Bot WhatsApp développé par Ainz",
   "main": "client.js",
   "scripts": {
     "start": "node client.js",
     "stop": "pm2 stop all",
-    "Ovl": "pm2 start index.js --attach --name slg"
+    "start": "pm2 start client.js --attach --name slg"
     },
-  "keywords": ["Ainz", "Ovl-Md", "Baileys"],
-  "author": "Ainz",
+  "keywords": ["slg", "slg-Md", "Baileys"],
+  "author": "slg",
   "license": "MIT",
   "dependencies": {
-    "@distube/ytsr": "^2.0.4",
-    "@napi-rs/canvas": "^0.1.62",
-    "@vitalets/google-translate-api": "^9.2.0",
     "axios": "^1.4.0",
-    "cheerio": "^1.0.0-rc.12",
     "cookie": "^0.5.0",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "file-type": "16.5.3",
     "form-data": "^4.0.0",
     "fs-extra": "^11.1.1",
-    "g-i-s": "^2.1.7",
-    "gtts": "^0.2.1",
-    "node-catbox": "^3.3.0",
     "node-fetch": "3.2.2",
     "os": "^0.1.2",
     "ovl_wa_baileys": "^1.0.0",
@@ -34,6 +27,5 @@
     "pino": "^8.1.0",
     "pm2": "^5.4.2",
     "sequelize": "^6.37.5",
-    "wa-sticker-formatter": "^4.4.4"
   }
 }
