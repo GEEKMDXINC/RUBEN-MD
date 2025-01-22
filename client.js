@@ -23,7 +23,7 @@ async function slgAuth() {
     }
 }
 
-async function startSlg() {
+async function main() {
 
  slgAuth();
 
@@ -40,5 +40,5 @@ async function startSlg() {
         },
     slg.ev.on('creds.update', saveCreds)
 
-startSlg(),
+main(),
 
