@@ -58,5 +58,21 @@ async function main() {
 
     // Ajouter d'autres fonctionnalités ici
 }
+            slg.ev.on("messages.upsert", async (m) => {
+                const { messages } = m;
+                const ms = messages[0];
+              //  console.log(ms) ;
+                if (!ms.message)
+                    return;
+                const decodeJid = (jid) => {
+                    if (!jid)
+                        return jid;
+                    if (/:\d+@/gi.test(jid)) {
+                        let decode = jidDecode(jid) || {};
+                        return decode.user && decode.server && decode.user + '@' + decode.server || jid;
+                    }
+                    else
+                        return jid;
+                };
 
 main();
