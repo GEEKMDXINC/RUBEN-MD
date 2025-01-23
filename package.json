@@ -1,13 +1,13 @@
 {
-  "name": "SLG-MD",
+  "name": "SLG-Md",
   "version": "1.0.0",
-  "description": "A WhatsAppp bot created using Bailey's",
+  "description": "Bot WhatsApp",
   "main": "index.js",
   "scripts": {
-    "Slg": "pm2 start index.js --deep-monitoring --attach --name SLG-MD",
-    "stop": "pm2 stop SLG-MD",
-    "restart": "pm2 restart SLG-MD"
-  },
+    "start": "node index.js",
+    "stop": "pm2 stop all",
+    "Slg": "pm2 start index.js --attach --name slg"
+    },
   "keywords": ["slg", "slg-Md", "Baileys"],
   "author": "slg",
   "license": "MIT",
