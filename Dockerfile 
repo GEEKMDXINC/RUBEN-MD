@@ -1,0 +1,16 @@
+FROM node:lts-alpine
+
+RUN apk add --no-cache git ffmpeg && \
+    git clone https://github.com/GEEKMDXINC/SLG-MD.git /slg_bot
+
+WORKDIR /slg_bot
+
+COPY package.json .
+
+RUN npm i
+
+COPY . .
+
+EXPOSE 8000
+
+CMD ["npm", "run", "Slg"]
