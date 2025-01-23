@@ -41,7 +41,9 @@ async function slgAuth() {
 async function main() {
     await slgAuth();
 
+
     const { state, saveCreds } = await useMultiFileAuthState(credsPath);
+  const { version, isLatest } = await fetchLatestBaileysVersion();
     const slg = makeWASocket({
         printQRInTerminal: true,
         logger: pino({ level: "silent" }),
