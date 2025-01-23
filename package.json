@@ -1,13 +1,13 @@
 {
-  "name": "SLG",
+  "name": "SLG-MD",
   "version": "1.0.0",
-  "description": "Bot WhatsApp développé par Ainz",
+  "description": "A WhatsAppp bot created using Bailey's",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "stop": "pm2 stop all",
-    "start": "pm2 start index.js --attach --name slg"
-    },
+    "start": "pm2 start index.js --deep-monitoring --attach --name SLG-MD",
+    "stop": "pm2 stop SLG-MD",
+    "restart": "pm2 restart SLG-MD"
+  },
   "keywords": ["slg", "slg-Md", "Baileys"],
   "author": "slg",
   "license": "MIT",
