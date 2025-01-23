@@ -4,7 +4,7 @@
   "description": "A WhatsAppp bot created using Bailey's",
   "main": "index.js",
   "scripts": {
-    "start": "pm2 start index.js --deep-monitoring --attach --name SLG-MD",
+    "Slg": "pm2 start index.js --deep-monitoring --attach --name SLG-MD",
     "stop": "pm2 stop SLG-MD",
     "restart": "pm2 restart SLG-MD"
   },
