@@ -58,6 +58,12 @@ async function main() {
             keys: makeCacheableSignalKeyStore(state.keys, pino({ level: "silent" }).child({ level: "silent" }))
         }
     });
+            getMessage: async (key) => {
+                    const msg = await store.loadMessage(key.remoteJid, key.id);
+                    return msg.message;
+           }
+       
+store.bind(slg.ev);
 
     slg.ev.on('creds.update', saveCreds);
 
