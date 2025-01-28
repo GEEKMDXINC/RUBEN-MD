@@ -96,4 +96,36 @@ async function main() {
     });
 }
 
+// déclaration des vars utiles
+ 
+const mtype = getContentType(ms.message);
+    const texte = {
+    conversation: ms.message.conversation,
+    imageMessage: ms.message.imageMessage?.caption,
+    videoMessage: ms.message.videoMessage?.caption,
+    extendedTextMessage: ms.message.extendedTextMessage?.text,
+    buttonsResponseMessage: ms.message.buttonsResponseMessage?.selectedButtonId,
+    listResponseMessage: ms.message.listResponseMessage?.singleSelectReply?.selectedRowId,
+    messageContextInfo: ms.message.buttonsResponseMessage?.selectedButtonId ||
+        ms.message.listResponseMessage?.singleSelectReply?.selectedRowId || ms.text
+    }[mtype] || "";
+
+    const ms_org = ms.key.remoteJid;
+    const id_Bot = decodeJid(slg.user.id);
+    const id_Bot_N = id_Bot.split('@')[0];
+    const verif_Gp = ms_org?.endsWith("@g.us");
+    const infos_Groupe = verif_Gp ? await ovl.groupMetadata(ms_org) : "";
+    const nom_Groupe = verif_Grp ? infos_Groupe.subject : "";
+    const msg_Repondu = ms.message.extendedTextMessage?.contextInfo?.quotedMessage;
+    const auteur_Msg_Repondu = decodeJid(ms.message.extendedTextMessage?.contextInfo?.participant);
+    const mr = ms.message.extendedTextMessage?.contextInfo?.mentionedJid;
+    const auteur_Message = verif_Gp ? ms.key.participant : decodeJid(ms.key.fromMe ? id_Bot : ms.key.remoteJid);
+    const membre_Gp = verif_Gp ? ms.key.participant : '';
+    const nom_Auteur_msg = ms.pushName;
+    const arg = texte ? texte.trim().split(/ +/).slice(1) : null;
+    const verif_Cmd = texte ? texte.startsWith(prefixe) : false;
+    const cmds = verif_Cmd ? texte.slice(prefixe.length).trim().split(/ +/).shift().toLowerCase() : false;
+    const groupe_Admin = (participants) => participants.filter((m) => m.admin).map((m) => m.id);
+    const mbre_membre = verif_Groupe ? await infos_Groupe.participants : '';
+
 main();
