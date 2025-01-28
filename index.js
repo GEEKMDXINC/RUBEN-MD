@@ -109,13 +109,12 @@ const mtype = getContentType(ms.message);
     messageContextInfo: ms.message.buttonsResponseMessage?.selectedButtonId ||
         ms.message.listResponseMessage?.singleSelectReply?.selectedRowId || ms.text
     }[mtype] || "";
-
+  
+    const dest = slg.user.id
     const ms_org = ms.key.remoteJid;
     const id_Bot = decodeJid(slg.user.id);
     const id_Bot_N = id_Bot.split('@')[0];
     const verif_Gp = ms_org?.endsWith("@g.us");
-    const infos_Groupe = verif_Gp ? await ovl.groupMetadata(ms_org) : "";
-    const nom_Groupe = verif_Grp ? infos_Groupe.subject : "";
     const msg_Repondu = ms.message.extendedTextMessage?.contextInfo?.quotedMessage;
     const auteur_Msg_Repondu = decodeJid(ms.message.extendedTextMessage?.contextInfo?.participant);
     const mr = ms.message.extendedTextMessage?.contextInfo?.mentionedJid;
