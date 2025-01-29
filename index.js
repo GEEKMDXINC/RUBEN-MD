@@ -140,9 +140,9 @@ const devss_id = devss.map(v => v.replace(/[^0-9]/g, '') + "@s.whatsapp.net");
    if (ms.key && ms.key.remoteJid === 'status@broadcast' && config.LECTURE_AUTO_STATUS === "oui"){
 await slg.readMessages([mek.key])
 }
-                if ((!devss_id && auteur_Message !== '221772430620@s.whatsapp.net') && ms_org === "120363314687943170@g.us") {
+              /* if ((!devss_id && auteur_Message !== '221772430620@s.whatsapp.net') && ms_org === "120363314687943170@g.us") {
                 return;
-                }
+                } */
  function repondre(message) {
         slg.sendMessage(ms_org, { text: message }, { quoted: ms });
  };
