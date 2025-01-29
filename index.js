@@ -177,7 +177,7 @@ slg.ev.on("connection.update", async (con) => {
         console.log("✅ Connexion établie ; Le bot est en ligne 🌐\n\n");
 
        
-      let start_msg =  `\`\`\`Bot Connected\nVersion: ${packageVersion}\nTotal Plugins: ${totalPlugins}\nWorktype: ${workType}\`\`\``;
+      let start_msg =  `\`\`\`Bot Connected\nVersion: 1.0.0\nTotal Plugins: 0\nWorktype: undifined\`\`\``;
      
         await ovl.sendMessage(slg.user.id, { text: start_msg }); 
      
