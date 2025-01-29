@@ -179,7 +179,7 @@ slg.ev.on("connection.update", async (con) => {
        
       let start_msg =  `\`\`\`Bot Connected\nVersion: 1.0.0\nTotal Plugins: 0\nWorktype: undifined\`\`\``;
      
-        await ovl.sendMessage(slg.user.id, { text: start_msg }); 
+        await slg.sendMessage(slg.user.id, { text: start_msg }); 
      
     } else if (connection === 'close') {
                 if (lastDisconnect.error?.output?.statusCode === DisconnectReason.loggedOut) {
