@@ -6,7 +6,8 @@ if (fs.existsSync('config.env')) {
 
 module.exports = {
   SESSION_ID: process.env.SESSION_ID || 'Ruben-MD',
-OWNER: process.env.OWNER_NUMBER || '237693755398',  
+OWNER: process.env.NUMERO_OWNER || '237693755398', 
+STATUS: process.env.LECTURE_AUTO_STATUS || 'oui' 
  PREFIX: process.env.PREFIX || '.',
    MODE: process.env.MODE || 'prive',
 };
