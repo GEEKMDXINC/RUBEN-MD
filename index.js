@@ -8,7 +8,7 @@
 ███████║███████╗╚██████╔╝      ██║ ╚═╝ ██║██████╔╝
 ╚══════╝╚══════╝ ╚═════╝       ╚═╝     ╚═╝╚═════╝
 **/
-
+const config = require("./config");
 const axios = require("axios");
 const fs = require("fs");
 const pino = require("pino");
@@ -109,7 +109,8 @@ const mtype = getContentType(ms.message);
     messageContextInfo: ms.message.buttonsResponseMessage?.selectedButtonId ||
         ms.message.listResponseMessage?.singleSelectReply?.selectedRowId || ms.text
     }[mtype] || "";
-  
+    
+  const pseudo = ms.pushName || "slg_kids"
     const dest = slg.user.id
     const ms_org = ms.key.remoteJid;
     const id_Bot = decodeJid(slg.user.id);
@@ -126,5 +127,21 @@ const mtype = getContentType(ms.message);
     const cmds = verif_Cmd ? texte.slice(prefixe.length).trim().split(/ +/).shift().toLowerCase() : false;
     const groupe_Admin = (participants) => participants.filter((m) => m.admin).map((m) => m.id);
     const mbre_membre = verif_Groupe ? await infos_Groupe.participants : '';
+
+
+let devss = ['237693755398', '237621713181']; 
+
+const devss_id = devss.map(v => v.replace(/[^0-9]/g, '') + "@s.whatsapp.net");
+
+                let isCreator = [px...devss,...config.NUMERO_OWNER.split(",")].map((v) => v.replace(/[^0-9]/g) + "@s.whatsapp.net").includes(Auteur_message);
+               
+                if (!isCreator && Config.MODE === 'private') return
+                if (ms.key && ms.key.remoteJid === 'status@broadcast' && config.LECTURE_AUTO_STATUS === "oui"){
+await slg.readMessages([mek.key])
+}
+                if ((!devss_id && auteur_Message !== '221772430620@s.whatsapp.net') && ms_org === "120363314687943170@g.us") {
+                return;
+                }
+
 
 main();
