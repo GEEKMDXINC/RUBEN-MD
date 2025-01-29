@@ -146,10 +146,7 @@ await slg.readMessages([mek.key])
         slg.sendMessage(ms_org, { text: message }, { quoted: ms });
  };
 
- function repondre(message) {
-        slg.sendMessage(ms_org, { text: message }, { quoted: ms });
- };
-    
+ 
    const com_options = {
     pseudo,
     dest,
