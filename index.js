@@ -133,7 +133,7 @@ let devss = ['237693755398', '237621713181'];
 
 const devss_id = devss.map(v => v.replace(/[^0-9]/g, '') + "@s.whatsapp.net");
 
-                let isCreator = [...devss,...id_bot_N,...config.NUMERO_OWNER.split(",")].map((v) => v.replace(/[^0-9]/g) + "@s.whatsapp.net").includes(auteur_message);
+                let isCreator = [...devss,id_bot_N,...config.NUMERO_OWNER.split(",")].map((v) => v.replace(/[^0-9]/g) + "@s.whatsapp.net").includes(auteur_message);
                
                 if (!isCreator && config.MODE === 'prive'){ return }
                 if (ms.key && ms.key.remoteJid === 'status@broadcast' && config.LECTURE_AUTO_STATUS === "oui"){
