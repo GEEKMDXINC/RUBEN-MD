@@ -145,6 +145,26 @@ await slg.readMessages([mek.key])
  function repondre(message) {
         slg.sendMessage(ms_org, { text: message }, { quoted: ms });
  };
-   
+   const com_options = {
+    pseudo,
+    dest,
+    ms_org,
+    id_Bot,
+    id_Bot_N,
+    verif_Gp,
+    msg_Repondu,
+    auteur_Msg_Repondu,
+    mr,
+    auteur_Message,
+    membre_Gp,
+    arg,
+   prefix,
+  répondre,
+    verif_Cmd,
+    cmds,
+    groupe_Admin,
+    mbre_membre
+};
+
 
 main();
