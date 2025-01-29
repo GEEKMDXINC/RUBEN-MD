@@ -9,6 +9,7 @@
 ╚══════╝╚══════╝ ╚═════╝       ╚═╝     ╚═╝╚═════╝
 **/
 const config = require("./config");
+const préfixe = config.PREFIX ;
 const axios = require("axios");
 const fs = require("fs");
 const pino = require("pino");
@@ -141,6 +142,9 @@ await slg.readMessages([mek.key])
                 if ((!devss_id && auteur_Message !== '221772430620@s.whatsapp.net') && ms_org === "120363314687943170@g.us") {
                 return;
                 }
-
+ function repondre(message) {
+        slg.sendMessage(ms_org, { text: message }, { quoted: ms });
+ };
+   
 
 main();
