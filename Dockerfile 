@@ -1,7 +1,7 @@
 FROM node:lts-alpine
 
 RUN apk add --no-cache git ffmpeg && \
-    git clone https://github.com/GEEKMDXINC/SLG-MD.git /slg_bot
+    git clone https://github.com/GEEKMDXINC/RUBEN-MD.git /slg_bot
 
 WORKDIR /slg_bot
 
