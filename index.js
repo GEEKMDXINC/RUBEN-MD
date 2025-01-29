@@ -168,5 +168,23 @@ await slg.readMessages([mek.key])
     mbre_membre
 };
 
+slg.ev.on("connection.update", async (con) => {
+    const { connection, lastDisconnect } = con;
+
+    if (connection === "connecting") {
+        console.log("🌐 Connexion à WhatsApp en cours...");
+    } else if (connection === 'open') {
+        console.log("✅ Connexion établie ; Le bot est en ligne 🌐\n\n");
+
+       
+      let start_msg =  `\`\`\`Bot Connected\nVersion: ${packageVersion}\nTotal Plugins: ${totalPlugins}\nWorktype: ${workType}\`\`\``;
+     
+        await ovl.sendMessage(slg.user.id, { text: start_msg }); 
+     
+    } else if (connection === 'close') {
+                if (lastDisconnect.error?.output?.statusCode === DisconnectReason.loggedOut) {
+                    console.log('Connexion fermée: Déconnecté');
+                } else {
+                    console.log('Connexion fermée: Reconnexion en cours...');
 
 main();
