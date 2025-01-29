@@ -110,7 +110,7 @@ const mtype = getContentType(ms.message);
         ms.message.listResponseMessage?.singleSelectReply?.selectedRowId || ms.text
     }[mtype] || "";
     
-  const pseudo = ms.pushName || "slg_kids"
+  const pseudo = ms.pushName;
     const dest = slg.user.id
     const ms_org = ms.key.remoteJid;
     const id_Bot = decodeJid(slg.user.id);
@@ -121,7 +121,6 @@ const mtype = getContentType(ms.message);
     const mr = ms.message.extendedTextMessage?.contextInfo?.mentionedJid;
     const auteur_Message = verif_Gp ? ms.key.participant : decodeJid(ms.key.fromMe ? id_Bot : ms.key.remoteJid);
     const membre_Gp = verif_Gp ? ms.key.participant : '';
-    const nom_Auteur_msg = ms.pushName;
     const arg = texte ? texte.trim().split(/ +/).slice(1) : null;
     const verif_Cmd = texte ? texte.startsWith(prefixe) : false;
     const cmds = verif_Cmd ? texte.slice(prefixe.length).trim().split(/ +/).shift().toLowerCase() : false;
@@ -135,7 +134,7 @@ const devss_id = devss.map(v => v.replace(/[^0-9]/g, '') + "@s.whatsapp.net");
 
                 let isCreator = [...devss,...config.NUMERO_OWNER.split(",")].map((v) => v.replace(/[^0-9]/g) + "@s.whatsapp.net").includes(Auteur_message);
                
-                if (!isCreator && Config.MODE === 'private') return
+                if (!isCreator && Config.MODE === 'prive'){ return }
                 if (ms.key && ms.key.remoteJid === 'status@broadcast' && config.LECTURE_AUTO_STATUS === "oui"){
 await slg.readMessages([mek.key])
 }
