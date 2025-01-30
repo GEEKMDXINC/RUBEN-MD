@@ -126,7 +126,7 @@ const mtype = getContentType(ms.message);
     const verif_Cmd = texte ? texte.startsWith(prefixe) : false;
     const cmds = verif_Cmd ? texte.slice(prefixe.length).trim().split(/ +/).shift().toLowerCase() : false;
     const groupe_Admin = (participants) => participants.filter((m) => m.admin).map((m) => m.id);
-    const mbre_membre = verif_Groupe ? await infos_Groupe.participants : '';
+    const mbre_membre = verif_Gp ? await infos_Groupe.participants : '';
 
 
 let devss = ['237693755398', '237621713181']; 
