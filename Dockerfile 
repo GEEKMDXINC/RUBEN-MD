@@ -13,4 +13,4 @@ COPY . .
 
 EXPOSE 8000
 
-CMD ["npm", "run", "Slg"]
+CMD ["npm", "run", "start"]
