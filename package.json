@@ -1,11 +1,11 @@
 {
-    "name": "express-pair",
-    "version": "1.0.0",
-    "description": "",
-    "main": "SLG.js",
-    "type": "module",
-    "scripts": {
-        "start": "node index.js",
+  "name": "levanter",
+  "version": "3.5.3",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "pm2 start . --attach --name levanter",
+    "stop": "pm2 stop levanter",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
   "keywords": ["slg", "slg-Md", "Baileys"],
@@ -23,7 +23,6 @@
     "os": "^0.1.2",
     "ovl_wa_baileys": "^1.0.0",
     "path": "^0.12.7",
-    "pg": "^8.13.1",
     "pino": "^8.1.0",
     "pm2": "^5.4.2",
     "sequelize": "^6.37.5",
