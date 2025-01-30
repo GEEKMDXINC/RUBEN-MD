@@ -186,6 +186,8 @@ slg.ev.on("connection.update", async (con) => {
                 } else {
                     console.log('Connexion fermée: Reconnexion en cours...');
 
+};
+
 main();
 
 const express = require('express');
