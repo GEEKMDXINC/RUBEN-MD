@@ -4,7 +4,7 @@
   "description": "A WhatsApp bot created using Node.js",
   "main": "index.js",
   "scripts": {
-    "start": "pm2 start index.js --deep-monitoring --attach --name wabot",
+    "start": "node index.js", 
     "stop": "pm2 stop wabot",
     "restart": "pm2 restart wabot"
   },
@@ -25,6 +25,9 @@
     "path": "^0.12.7",
     "pino": "^8.1.0",
     "pm2": "^5.4.2",
-    "sequelize": "^6.37.5" 
+    "sequelize": "^6.37.5"
+  },
+  "engines": {
+    "node": ">=18.0.0" 
   }
 }
