@@ -191,31 +191,7 @@ main();
 const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
-const os = require('os');
-
-let dernierPingRecu = Date.now();
-
-app.get('/', (req, res) => {
-    res.send(`<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OVL-Bot Web Page</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { display: flex; justify-content: center; align-items: center; height: 100vh; background-color: #121212; font-family: Arial, sans-serif; color: #ffffff; overflow: hidden; }
-        .content { text-align: center; padding: 30px; background-color: #1e1e1e; border-radius: 12px; box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; }
-        .content:hover { transform: translateY(-5px); box-shadow: 0 12px 30px rgba(255, 255, 255, 0.15); }
-        h1 { font-size: 2em; color: #f0f0f0; margin-bottom: 15px; letter-spacing: 1px; }
-        p { font-size: 1.1em; color: #d3d3d3; line-height: 1.5; }
-    </style>
-</head>
-<body>
-    <div class="content">
-        <h1>Bienvenue sur OVL-MD</h1>
-        <p>Votre assistant WhatsApp</p>
-    </div>
-</body>
-</html>`);
+app.get("/", (req, res) => {
+res.send("hey, bot startedâœ…");
 });
+app.listen(port, () => console.log(`Server listening on port http://localhost:${port}`));
