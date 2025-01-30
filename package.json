@@ -1,12 +1,12 @@
 {
-  "name": "SLG-Md",
-  "version": "1.0.0",
-  "description": "Bot WhatsApp",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js",
-    "stop": "pm2 stop all",
-    "Slg": "pm2 start index.js --attach --name slg"
+    "name": "express-pair",
+    "version": "1.0.0",
+    "description": "",
+    "main": "SLG.js",
+    "type": "module",
+    "scripts": {
+        "start": "node index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
     },
   "keywords": ["slg", "slg-Md", "Baileys"],
   "author": "slg",
