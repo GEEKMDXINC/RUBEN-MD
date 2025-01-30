@@ -125,8 +125,8 @@ const mtype = getContentType(ms.message);
     const arg = texte ? texte.trim().split(/ +/).slice(1) : null;
     const verif_Cmd = texte ? texte.startsWith(prefixe) : false;
     const cmds = verif_Cmd ? texte.slice(prefixe.length).trim().split(/ +/).shift().toLowerCase() : false;
-    const groupe_Admin = (participants) => participants.filter((m) => m.admin).map((m) => m.id);
-    const mbre_membre = verif_Gp ? await infos_Groupe.participants : '';
+    
+    
 
 
 let devss = ['237693755398', '237621713181']; 
@@ -164,9 +164,7 @@ await slg.readMessages([mek.key])
    prefix,
   répondre,
     verif_Cmd,
-    cmds,
-    groupe_Admin,
-    mbre_membre
+    cmds
 };
 
 slg.ev.on("connection.update", async (con) => {
