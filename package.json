@@ -1,13 +1,15 @@
 {
-  "name": "levanter",
-  "version": "3.5.3",
-  "description": "",
+  "name": "yourbot",
+  "version": "1.0.0",
+  "description": "A WhatsApp bot created using Node.js",
   "main": "index.js",
   "scripts": {
-    "start": "pm2 start . --attach --name levanter",
-    "stop": "pm2 stop levanter",
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
+    "start": "pm2 start index.js --deep-monitoring --attach --name wabot",
+    "stop": "pm2 stop wabot",
+    "restart": "pm2 restart wabot"
+  },
+
+
   "keywords": ["slg", "slg-Md", "Baileys"],
   "author": "slg",
   "license": "",
