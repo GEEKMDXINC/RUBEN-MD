@@ -5,7 +5,7 @@ if (fs.existsSync('config.env')) {
 }
 
 module.exports = {
-  SESSION_ID: process.env.SESSION_ID || 'SLG-MD~UBY4cNAf',
+  SESSION_ID: process.env.SESSION_ID || 'SLG-MD~36rmv3ck',
 OWNER: process.env.NUMERO_OWNER || '', 
 STATUS: process.env.LECTURE_AUTO_STATUS || 'oui' 
  PREFIX: process.env.PREFIX || '.',
