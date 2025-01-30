@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node index.js", 
     "stop": "pm2 stop wabot",
-    "restart": "pm2 restart wabot"
+    "restart": "pm2 restart wabot",
+    "install": "npm install" 
   },
   "keywords": ["slg", "slg-Md", "Baileys"],
   "author": "slg",
