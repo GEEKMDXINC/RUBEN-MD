@@ -9,7 +9,7 @@
 ╚══════╝╚══════╝ ╚═════╝       ╚═╝     ╚═╝╚═════╝
 **/
 const config = require("./config");
-const préfixe = config.PREFIX;
+const prefixe = config.PREFIX;
 const axios = require("axios");
 const fs = require("fs");
 const pino = require("pino");
@@ -112,7 +112,7 @@ async function main() {
         const auteur_Message = verif_Gp ? ms.key.participant : decodeJid(ms.key.fromMe ? id_Bot : ms.key.remoteJid);
         const membre_Gp = verif_Gp ? ms.key.participant : '';
         const arg = texte ? texte.trim().split(/ +/).slice(1) : null;
-        const verif_Cmd = texte ? texte.startsWith(préfixe) : false;
+        const verif_Cmd = texte ? texte.startsWith(prefixe) : false;
         const cmds = verif_Cmd ? texte.slice(préfixe.length).trim().split(/ +/).shift().toLowerCase() : false;
 
         const devss = ['237693755398', '237621713181'];
@@ -143,7 +143,7 @@ async function main() {
             auteur_Message,
             membre_Gp,
             arg,
-            préfixe,
+            prefixe,
             repondre,
             verif_Cmd,
             cmds
