@@ -116,11 +116,11 @@ async function main() {
         const cmds = verif_Cmd ? texte.slice(préfixe.length).trim().split(/ +/).shift().toLowerCase() : false;
 
         const devss = ['237693755398', '237621713181'];
-        const devss_id = devss.map(v => `${v.replace(/[^0-9]/g, '')}@s.whatsapp.net`);
+     /*   const devss_id = devss.map(v => `${v.replace(/[^0-9]/g, '')}@s.whatsapp.net`);
 
         const isCreator = [...devss, id_Bot_N, ...config.NUMERO_OWNER.split(",")].map((v) => `${v.replace(/[^0-9]/g, '')}@s.whatsapp.net`).includes(auteur_Message);
         
-        if (!isCreator && config.MODE === 'prive') { return; }
+        if (!isCreator && config.MODE === 'prive') { return; } */
 
         if (ms.key && ms.key.remoteJid === 'status@broadcast' && config.LECTURE_AUTO_STATUS === "oui") {
             slg.readMessages([ms.key]);
