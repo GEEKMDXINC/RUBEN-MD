@@ -1,9 +1,5 @@
-const fs = require('fs-extra');
-
-if (fs.existsSync('config.env')) {
-  require('dotenv').config({ path: __dirname + '/config.env' });
-}
-
+const dotenv = require('dotenv');
+dotenv.config();
 module.exports = {
   SESSION_ID: process.env.SESSION_ID || 'SLG-MD~36rmv3ck',
 OWNER: process.env.NUMERO_OWNER || '', 
