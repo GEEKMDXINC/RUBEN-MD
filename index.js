@@ -9,7 +9,7 @@
 ╚══════╝╚══════╝ ╚═════╝       ╚═╝     ╚═╝╚═════╝
 **/
 const config = require("./config");
-const prefixe = config.PREFIX;
+const prefixe = config.PREFIX
 const axios = require("axios");
 const fs = require("fs");
 const pino = require("pino");
