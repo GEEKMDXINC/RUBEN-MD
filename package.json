@@ -4,6 +4,7 @@
   "description": "Bot WhatsApp développé par SLG",
   "main": "index.js",
   "scripts": {
+             "test": "echo \"Error: no test specified\" && exit 1"
     "start": "node index.js",
     "stop": "pm2 stop all",
     "Slg": "pm2 start index.js --attach --name slg"
